@@ -3,17 +3,17 @@ let myArray=[];
 let newArray=[];
 
 let argToRemove = 0;
-const removeFromArray = function(myArray, argToRemove) {
+const removeFromArray = function(myArray, ...argToRemove) {
+
+    //const argToRemove2 = Array.from(argToRemove);
+
+    newArray = myArray.filter(item => !argToRemove.includes(item));
 
 
 
-    newArray = myArray.filter(myArray => myArray != argToRemove);
 
 
-
-
-
-
+console.log(argToRemove);
 console.log(newArray);
 return newArray;
 
